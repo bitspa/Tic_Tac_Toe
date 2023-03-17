@@ -1,38 +1,142 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background: url('../public/flash-light.jpg') no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 0;
+  margin: 0;
+}
+.game_header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board {
+  width: 400px;
+  height: 400px;
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid rgb(235, 246, 34);
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.row {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+}
+.game_header{
+  font-size: 20px;
+  color:whitesmoke;
+  font-style: italic;
+}
+.Detail_section, .Detail_section1{
+  margin-left:20px;
+  color:whitesmoke;
+  font-style: italic;
+}
+.Detail_section{
+  font-size: 20px;
+  margin-top:15px;
+}
+
+.Detail_section1{
+  font-size: 40px;
+  margin-top:200px;
+}
+.form-control{
+  width:450px;
+  height:35px;
+  border-radius: 10px;
+}
+.logout_section{
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ flex-direction: row;
+ margin-right: 30px;
+}
+.LogoutButton{
+  width:80px;
+  height:30px;
+  background-color: #f4511e;
+  color: White;
+  border-radius: 10px;
+}
+
+.StartDesign
+{
+  padding: 15px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  gap:30px;
 }
 
-.App-link {
-  color: #61dafb;
+.square {
+  flex: 33%;
+  height: 100%;
+  border: 1px solid white;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 80px;
+  color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mt-2{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.mt-2 span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.mt-2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.mt-2:hover span {
+  padding-right: 25px;
+}
+
+.mt-2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.All_Together{
+  display: flex;
+  justify-content:center;
+  align-items: flex-start;
+  flex-direction: row;
 }
